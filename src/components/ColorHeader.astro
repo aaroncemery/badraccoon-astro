@@ -1,0 +1,49 @@
+---
+import Button from "./Button.astro";
+
+const { bgColor, fontColor, buttonColor, title } = Astro.props
+---
+
+<header class="header" style={`background-color: ${bgColor}; color: ${fontColor};`}>
+  <div class="header__content-wrapper">
+  <h1 class="header__title one-word-per-line" style={`color: ${fontColor}`}>{title}</h1>
+  <Button text="inquire" textColor={bgColor} bgColor={fontColor} />
+</div>
+</header>
+<style>
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 50px;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header__content-wrapper {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .one-word-per-line {
+    word-spacing: 100000px; 
+}
+  .header__title {
+    font-size: 36px;
+    font-weight: 500;
+    font-family: monospace;
+    color: #fff;
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    display: table-caption;
+    display: -ms-grid;
+    -ms-grid-columns: min-content;
+  }
+  .header__color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+</style>

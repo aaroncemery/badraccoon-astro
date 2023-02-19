@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'PPAcmaThin';
+  src: url('/fonts/PPAcma-Thin.otf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPAcmaLight';
+  src: url('/fonts/PPAcma-Light.otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPAcmaSemibold';
+  src: url('/fonts/PPAcma-Semibold.otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPAcmaBold';
+  src: url('/fonts/PPAcma-Black.otf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

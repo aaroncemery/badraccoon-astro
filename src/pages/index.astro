@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Cloudinary} from '@cloudinary/url-gen'
+
+const cloudinary = new Cloudinary({
+	cloud: {
+		cloudName: import.meta.env.PUBLIC_CLOUD_NAME
+	}
+});
+
+const fetchedImage = cloudinary.image('https://res.cloudinary.com/dsbuqcmrw/image/upload/v1676775360/illustrations/bloom-woman-and-man-doing-web-browser-development_lyzlp1.svg').setDeliveryType('fetch');
+---
+
+<Layout title="bad_raccoon. be. different... be. uniqui.">
+	<main>
+		<div class="container mx-auto px-4 grid grid-cols-2 items-center">
+			<div class="flex flex-col max-w-fit">
+				<h1 class="font-heading text-8xl">be different.</h1>
+				<p class="font-heading text-2xl self-end">be unique.</p>
+			</div>
+			<img src={fetchedImage.toURL()} alt="bad_raccoon. be. different... be. uniqui." />
+	</div>
+	</main>
+</Layout>
